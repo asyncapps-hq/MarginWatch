@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head><meta charset="utf-8"/><title>Static portal fixture</title></head>
+<body>
+<form id="login" data-testid="login-form">
+  <input data-testid="username" value="buyer"/>
+  <input data-testid="password" type="password" value="demo-pass"/>
+  <button type="button" data-testid="login-submit">Sign in</button>
+</form>
+<table data-testid="catalog-table" hidden>
+  <tbody>
+    <tr data-testid="sku-row" data-sku="SEA-BOLT-M6">
+      <td data-testid="sku">SEA-BOLT-M6</td>
+      <td data-testid="title">M6 Stainless Bolt Pack</td>
+      <td class="price" data-testid="price">12.50</td>
+      <td data-testid="currency">USD</td>
+    </tr>
+    <tr data-testid="sku-row" data-sku="SEA-BRG-6204">
+      <td data-testid="sku">SEA-BRG-6204</td>
+      <td data-testid="title">Bearing 6204-2RS</td>
+      <td class="price" data-testid="price">4.20</td>
+      <td data-testid="currency">USD</td>
+    </tr>
+  </tbody>
+</table>
+<script>
+document.querySelector('[data-testid=login-submit]').onclick = () => {
+  document.querySelector('[data-testid=catalog-table]').hidden = false;
+  document.querySelector('#login').hidden = true;
+};
+</script>
+</body>
+</html>

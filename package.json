@@ -1,0 +1,28 @@
+{
+  "name": "marginwatch",
+  "version": "0.1.0",
+  "private": true,
+  "description": "B2B Supplier Portal Automator — Playwright price watch, Postgres deltas, email alerts",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "npm run build -w @marginwatch/core && npm run build -w @marginwatch/worker && npm run build -w @marginwatch/portal && npm run build -w @marginwatch/web",
+    "test": "npm run build -w @marginwatch/core && npm run test -w @marginwatch/core && npm run test -w @marginwatch/worker",
+    "demo": "npm run demo -w @marginwatch/worker",
+    "doctor": "npm run doctor -w @marginwatch/worker",
+    "dev:portal": "npm run dev -w @marginwatch/portal",
+    "dev:web": "npm run dev -w @marginwatch/web"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "author": "KhyFee (https://github.com/KhyFee)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/KhyFee/MarginWatch.git"
+  },
+  "homepage": "https://github.com/KhyFee/MarginWatch#readme"
+}
