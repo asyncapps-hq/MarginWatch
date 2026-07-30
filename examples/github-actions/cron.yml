@@ -1,0 +1,26 @@
+name: MarginWatch cron
+
+on:
+  schedule:
+    - cron: '0 */6 * * *'
+  workflow_dispatch:
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: npm ci || npm install
+      - run: npx playwright install --with-deps chromium
+      - run: npm run build -w @marginwatch/core && npm run build -w @marginwatch/worker
+      - name: Start portal
+        run: npm run dev -w @marginwatch/portal &
+      - run: sleep 3
+      - run: node packages/worker/dist/cli.js run
+        env:
+          PORTAL_URL: http://127.0.0.1:4010
+          PORTAL_USER: buyer
+          PORTAL_PASS: demo-pass

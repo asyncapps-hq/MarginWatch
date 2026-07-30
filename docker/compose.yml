@@ -1,0 +1,28 @@
+services:
+  portal:
+    image: node:22-bookworm
+    working_dir: /app
+    volumes:
+      - ../:/app
+    command: bash -lc "npm install && npm run dev -w @marginwatch/portal"
+    ports:
+      - "4010:4010"
+    environment:
+      PORT: "4010"
+      PORTAL_USER: buyer
+      PORTAL_PASS: demo-pass
+  worker:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile.worker
+    environment:
+      PORTAL_URL: http://portal:4010
+      PORTAL_USER: buyer
+      PORTAL_PASS: demo-pass
+      MARGINWATCH_DATA_DIR: /data
+    volumes:
+      - mwdata:/data
+    depends_on:
+      - portal
+volumes:
+  mwdata:

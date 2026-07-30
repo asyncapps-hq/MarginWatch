@@ -1,0 +1,11 @@
+FROM mcr.microsoft.com/playwright:v1.62.0-noble
+WORKDIR /app
+COPY package.json package-lock.json* ./
+COPY packages ./packages
+COPY apps/portal ./apps/portal
+COPY tsconfig.base.json ./
+RUN npm install && npm run build -w @marginwatch/core && npm run build -w @marginwatch/worker
+ENV MARGINWATCH_DATA_DIR=/data
+VOLUME ["/data"]
+ENTRYPOINT ["node", "packages/worker/dist/cli.js"]
+CMD ["run"]

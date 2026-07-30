@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="300" viewBox="0 0 900 300" role="img" aria-label="MarginWatch architecture">
+  <rect width="900" height="300" fill="#0e1412"/>
+  <text x="24" y="36" fill="#e8f0ea" font-family="Georgia,serif" font-size="20" font-weight="700">MarginWatch architecture</text>
+  <rect x="24" y="70" width="140" height="50" rx="10" fill="#17201c" stroke="#3dd68c"/>
+  <text x="94" y="100" text-anchor="middle" fill="#e8f0ea" font-family="sans-serif" font-size="13">Cron/CLI</text>
+  <rect x="190" y="70" width="140" height="50" rx="10" fill="#17201c" stroke="#3dd68c"/>
+  <text x="260" y="100" text-anchor="middle" fill="#e8f0ea" font-family="sans-serif" font-size="13">Worker</text>
+  <rect x="356" y="70" width="160" height="50" rx="10" fill="#17201c" stroke="#f0b429"/>
+  <text x="436" y="100" text-anchor="middle" fill="#e8f0ea" font-family="sans-serif" font-size="13">Session cookies</text>
+  <rect x="542" y="70" width="160" height="50" rx="10" fill="#17201c" stroke="#3dd68c"/>
+  <text x="622" y="100" text-anchor="middle" fill="#e8f0ea" font-family="sans-serif" font-size="13">Playwright</text>
+  <rect x="728" y="70" width="148" height="50" rx="10" fill="#17201c" stroke="#3dd68c"/>
+  <text x="802" y="100" text-anchor="middle" fill="#e8f0ea" font-family="sans-serif" font-size="13">Portal</text>
+  <path d="M164 95 H190" stroke="#8fa396" stroke-width="2"/>
+  <path d="M330 95 H356" stroke="#8fa396" stroke-width="2"/>
+  <path d="M516 95 H542" stroke="#8fa396" stroke-width="2"/>
+  <path d="M702 95 H728" stroke="#8fa396" stroke-width="2"/>
+  <rect x="190" y="170" width="160" height="50" rx="10" fill="#17201c" stroke="#3dd68c"/>
+  <text x="270" y="200" text-anchor="middle" fill="#e8f0ea" font-family="sans-serif" font-size="13">Change detector</text>
+  <rect x="380" y="170" width="160" height="50" rx="10" fill="#17201c" stroke="#3dd68c"/>
+  <text x="460" y="200" text-anchor="middle" fill="#e8f0ea" font-family="sans-serif" font-size="13">Postgres</text>
+  <rect x="570" y="170" width="160" height="50" rx="10" fill="#17201c" stroke="#f0b429"/>
+  <text x="650" y="200" text-anchor="middle" fill="#e8f0ea" font-family="sans-serif" font-size="13">Email/outbox</text>
+  <path d="M260 120 V170" stroke="#8fa396" stroke-width="2"/>
+  <text x="24" y="270" fill="#8fa396" font-family="sans-serif" font-size="12">by KhyFee - deterministic automation, no AI</text>
+</svg>
