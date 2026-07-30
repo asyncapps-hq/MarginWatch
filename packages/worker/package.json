@@ -1,0 +1,27 @@
+{
+  "name": "@marginwatch/worker",
+  "version": "0.1.0",
+  "type": "module",
+  "bin": {
+    "marginwatch": "./dist/cli.js"
+  },
+  "main": "./dist/index.js",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "cli": "tsx src/cli.ts",
+    "demo": "tsx src/cli.ts demo",
+    "doctor": "tsx src/cli.ts doctor",
+    "test": "node --import tsx --test src/**/*.test.ts"
+  },
+  "dependencies": {
+    "@marginwatch/core": "*",
+    "playwright": "1.62.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.10",
+    "tsx": "^4.19.3",
+    "typescript": "^5.8.2"
+  },
+  "author": "KhyFee (https://github.com/KhyFee)",
+  "license": "MIT"
+}
